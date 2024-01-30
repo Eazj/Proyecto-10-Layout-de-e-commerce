@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "navbar navbar"
+                         "main main"
+                         "footer footer";
+    grid-template-rows: 12vh 1fr 12vh;
+}
+.navBar{
+    background-color: aqua;
+    grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenedor{
+    background-color: yellowgreen;
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "asideBar productos"
+                         "asideBar productos"
+                         "asideBar productos";
+                         grid-template-columns: 10vw 1fr;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: chartreuse;
+    grid-area: footer;
+}
+.asideBar{
+    grid-area: asideBar;
+    background-color: blueviolet;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.productos{
+    grid-area: productos;
+    background-color:violet;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.producto{
+    height: 30vh;
+    background-color: chocolate;
+}
