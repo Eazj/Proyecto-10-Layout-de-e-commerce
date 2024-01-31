@@ -12,15 +12,14 @@ body{
     grid-template-rows: 12vh 1fr 12vh;
 }
 .navBar{
-    background-color: aqua;
+    background-color: #e10600;
     grid-area: navbar;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    color: white;
 }
 .contenedor{
-    background-color: yellowgreen;
     grid-area: main;
     display: grid;
     grid-template-areas: "asideBar productos"
@@ -32,28 +31,47 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: chartreuse;
     grid-area: footer;
+    background-color: #e10600;
+    color: white;
 }
 .asideBar{
     grid-area: asideBar;
-    background-color: blueviolet;
     padding-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
+.asideBar h4{
+    color: #016fe5;
+}
 .productos{
     grid-area: productos;
-    background-color:violet;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
 .producto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 30vh;
-    background-color: chocolate;
+    margin: 1vw;
+}
+.producto img{
+    height: 20vh;
+}
+.boton{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 4vh;
+    width: 10vw;
+    background-color: #e10600;
+    color: white;
+    border-radius: 1rem;
 }
